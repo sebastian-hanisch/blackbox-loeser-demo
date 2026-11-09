@@ -38,8 +38,9 @@ def test_readme_contains_every_generated_table_line():
 
 
 def test_readme_has_no_leftover_placeholders_and_uses_the_agreed_words():
-    assert "{{" not in README and "TODO nach dem Deploy" in README        # der Live-Link-Platzhalter bleibt bis zum Deploy
-    assert README.count("TODO") == 1
+    assert "{{" not in README
+    assert "[→ Demo live ausprobieren](https://sebastianhanisch-blackbox-loeser-demo.streamlit.app/)" in README   # Live-Link seit dem Deploy
+    assert "TODO" not in README
     assert "Zufalls-Seed" in README and "Saatwert" not in README and "läuft lokal" not in README
 
 

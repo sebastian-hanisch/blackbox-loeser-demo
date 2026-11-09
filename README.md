@@ -1,7 +1,6 @@
 # Der Löser als Black Box: Interpolation statt Ableitung – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-blackbox-loeser-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-blackbox-loeser-demo.streamlit.app/)**
 
 Demo der Reihe **Entscheidungsorientiertes Lernen** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. Sie setzt `spo-kuerzester-weg-demo` fort (dasselbe 5 × 5 Gitter mit 40 Bögen und 70 Wegen, derselbe Löser, dieselbe Kostenwelt; Code kopiert, nicht importiert) und fragt, was passiert, wenn man den **Löser nicht öffnen** darf: Man kennt nur die Funktion „Kosten → Weg“. Ein **Gradient** entsteht dann aus einem zweiten Löseraufruf mit verschobenen Kosten: die Differenz der beiden Lösungen, geteilt durch den Verschiebungsparameter **λ**, ist der Gradient einer Interpolation. Das Modell (linear, 240 Parameter) wird damit wie bei SPO+ mit Adam trainiert, der Löser läuft in jeder Runde zweimal.
 
