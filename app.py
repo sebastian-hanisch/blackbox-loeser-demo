@@ -137,7 +137,7 @@ if made and made[0] == settings:
 
 # --- Kernfrage -----------------------------------------------------------------------------------------------------------------------------
 
-st.markdown("## ❓ Kernfrage: Trägt die Interpolation auch mit verrauschten Zielen?")
+st.markdown("## ❓ Kernfrage: Funktioniert die Interpolation auch mit verrauschten Zielen?")
 bb_med = {lam: B.median(float(noise), key) for lam, key in LAM_KEYS.items()}
 bb_worse = {lam: B.count_worse(float(noise), key) for lam, key in LAM_KEYS.items()}
 kind, text = verdict_noise(float(noise), B.median(float(noise), "kq"), B.median(float(noise), "spo"), bb_med, bb_worse, n_seeds)
@@ -322,5 +322,5 @@ st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
     "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
-    "Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html)."
+    "Mehr zur Reihe: [Entscheidungsorientiert: Regret bis Wahl](https://sebastianhanisch.net/konzepte-entscheidungsorientiert.html)."
 )
